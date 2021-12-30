@@ -2,16 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Security } from "@okta/okta-react";
+require("dotenv").config();
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-require("dotenv").config();
-const { REACT_APP_OKTA_ORG_URL, REACT_APP_OKTA_CLIENT_ID } = process.env;
+const { REACT_APP_OKTA_ORG_URL } = process.env;
+const { REACT_APP_OKTA_CLIENT_ID } = process.env;
 
 const oktaConfig = {
-  issuer: `https://dev-8848564.okta.com/oauth2/default`,
+  issuer: `${REACT_APP_OKTA_ORG_URL}/oauth2/default`,
   redirect_uri: `${window.location.origin}/login/callback`,
-  client_id: "0oa2ad9dwfWoCmEgM5d7",
+  client_id: REACT_APP_OKTA_CLIENT_ID,
 };
 
 ReactDOM.render(
