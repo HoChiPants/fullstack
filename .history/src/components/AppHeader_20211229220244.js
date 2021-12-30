@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AppBar, Toolbar, Typography, withStyles } from "@material-ui/core";
 
-import LoginButton from './LoginButton';
+import LoginButton from "./LoginButton";
 
 const styles = {
   flex: {
@@ -21,4 +22,4 @@ const AppHeader = ({ classes }) => (
   </AppBar>
 );
 
-export default withStyles(styles)AppHeader;
+export default withStyles(styles)(AppHeader);

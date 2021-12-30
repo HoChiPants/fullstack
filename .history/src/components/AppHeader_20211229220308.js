@@ -1,5 +1,12 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, withStyles } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import {
+  AppBar,
+  Button,
+  Toolbar,
+  Typography,
+  withStyles,
+} from "@material-ui/core";
 
 import LoginButton from "./LoginButton";
 
@@ -14,6 +21,12 @@ const AppHeader = ({ classes }) => (
     <Toolbar>
       <Typography variant="h6" color="inherit">
         My React App
+        <Button color="inherit" component={Link} to="/">
+          Home
+        </Button>
+        <Button color="inherit" component={Link} to="/posts">
+          Posts Manager
+        </Button>
       </Typography>
       <div className={classes.flex} />
       <LoginButton />

@@ -22,12 +22,6 @@ const AppHeader = ({ classes }) => (
       <Typography variant="h6" color="inherit">
         My React App
       </Typography>
-      <Button color="inherit" component={Link} to="/">
-        Home
-      </Button>
-      <Button color="inherit" component={Link} to="/posts">
-        Posts Manager
-      </Button>
       <div className={classes.flex} />
       <LoginButton />
     </Toolbar>

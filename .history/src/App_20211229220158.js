@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { CssBaseline, withStyles } from "@material-ui/core";
 import { Route } from "react-router-dom";
-import { LoginCallback } from "@okta/okta-react";
+import { SecureRoute, LoginCallback } from "@okta/okta-react";
 
 import AppHeader from "./components/AppHeader";
 import Home from "./pages/Home";
